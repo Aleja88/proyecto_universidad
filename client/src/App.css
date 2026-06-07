@@ -1,0 +1,230 @@
+:root {
+  --bg-main: #121214;         
+  --panel-bg: #1e1e22;         
+  --text-primary: #f3f4f6;     
+  --text-secondary: #9ca3af;   
+  --border-light: #2a2a30;     
+  
+   --input-bg: #252529;         
+  --input-border: #3f3f46;     
+  --input-focus: #71717a;      
+
+
+  --btn-register: #e4e4e7;    
+  --btn-register-hover: #ffffff;
+  --btn-register-text: #18181b;
+
+  --btn-edit: #3f3f46;        
+  --btn-edit-hover: #52525b;
+  
+  --btn-delete: #27272a;      
+  --btn-delete-hover: #3f3f46;
+  --btn-delete-border: #52525b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.contenedor-principal {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.panel-gestion {
+  background-color: var(--panel-bg);
+  width: 100%;
+  max-width: 1150px;
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.cabecera-seccion {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cabecera-seccion h1 {
+  margin: 0 0 8px 0;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.cabecera-seccion p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.formulario-docente {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.fila-formulario {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.grupo-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.ancho-1 { flex: 1; }
+.ancho-2 { flex: 2; }
+
+.grupo-input label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.grupo-input input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-primary);
+  padding: 11px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.15s ease;
+}
+
+.grupo-input input:focus {
+  outline: none;
+  border-color: var(--input-focus);
+}
+
+.grupo-input input::placeholder {
+  color: #52525b;
+}
+
+.fila-acciones-formulario {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btn-primario {
+  background-color: var(--btn-register);
+  color: var(--btn-register-text);
+  border: none;
+  padding: 13px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primario:hover {
+  background-color: var(--btn-register-hover);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--input-border);
+  padding: 13px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: all 0.15s ease;
+}
+
+.btn-secundario:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.contenedor-tabla {
+  width: 100%;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-light);
+  margin-top: 10px;
+}
+
+.tabla-docentes {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-docentes thead th {
+  padding: 16px 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--input-border);
+}
+
+.tabla-docentes tbody td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 14px;
+  color: #dbdbde;
+}
+
+.tabla-docentes tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.tabla-vacia {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 32px !important;
+}
+
+.celda-centrada {
+  text-align: center;
+}
+
+.celda-acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-editar, .btn-eliminar {
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-editar {
+  background-color: var(--btn-edit);
+  border: none;
+  color: var(--text-primary);
+}
+
+.btn-editar:hover {
+  background-color: var(--btn-edit-hover);
+}
+
+.btn-eliminar {
+  background-color: var(--btn-delete);
+  border: 1px solid var(--btn-delete-border);
+  color: #f4f4f5;
+}
+
+.btn-eliminar:hover {
+  background-color: var(--btn-delete-hover);
+  border-color: var(--text-secondary);
+}
